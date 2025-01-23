@@ -1,29 +1,31 @@
 inspired by https://github.com/danilofalcao/cursor-deepseek
 This is a nodejs version 
 
-安装node js v18.17.0
-# 初始化
+# install node js v18.17.0
+https://nodejs.org/en/download
+# set npm mirror for quick install
 npm config set registry https://registry.npmmirror.com
+# init project
 npm init -y
 
-# 安装依赖
+# install dependency
 npm install dotenv http2
 
-设置.env文件中ds密钥
-DEEPSEEK_API_KEY=sk-xx*************(自己申请的)
+#set deepseek api in .env
+DEEPSEEK_API_KEY=sk-xx*************(yours)
 
-# 启动服务,http端口
+# start proxy server on 9001
 node deepseek-proxy.js
 
-#测试HTTP/1.1服务
+#test 
 curl http://localhost:9001/v1/models
 
-#暴露内网为公网IP
+# use this one to get a public url for your local server, or cursor may complain with error。
 https://www.cpolar.com/
 
-#最终cursor 模型配置base url:
-http://xxxx.cpolar.top
+# cursor model setting set openai base url and model use gpt-4o:
+-- baseurl: http://xxxx.cpolar.top
+-- apikey:your deepseek apikey
 
-密钥保持与deepseek申请的一致
 
   
