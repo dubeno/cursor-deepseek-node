@@ -1,3 +1,5 @@
+inspired by https://github.com/danilofalcao/cursor-deepseek
+This is a nodejs version 
 
 安装node js v18.17.0
 # 初始化
